@@ -726,7 +726,10 @@ nav a:hover::after {
 }
 
 .view-all-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    color: #ffffff;
+    background: linear-gradient(45deg, #c061cd, #f78196);
+    box-shadow: 0 5px 15px rgba(192, 97, 205, 0.4);
 }
 
 
