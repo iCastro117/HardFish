@@ -219,8 +219,8 @@ nav ul li a:hover {
 /* Estilos para el video */
 
 .hero-video {
-    width: 45%;
-    margin-left: 5%;
+    width: 50%;
+    margin-left: -50%;
 }
 
 .hero-video video {
