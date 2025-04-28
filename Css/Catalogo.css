@@ -146,8 +146,9 @@ button {
 }
 
 
-/* Estilos del header */
 
+
+/* Estilos del header */
 header {
     padding: 20px 0;
     position: fixed;
@@ -163,12 +164,18 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.03);
 }
 
 .logo-circle {
@@ -176,15 +183,18 @@ header .container {
     height: 30px;
     background-color: #ffffff;
     border-radius: 50%;
+    flex-shrink: 0;
 }
 
 .logo h1 {
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: -0.5px;
 }
 
 .logo span {
     color: var(--primary-color);
+    font-weight: 700;
 }
 
 nav ul {
@@ -195,14 +205,108 @@ nav ul {
 
 nav a {
     color: var(--text-color);
-    text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: all 0.3s;
+    position: relative;
+    padding: 5px 0;
 }
 
-nav a:hover {
-    color: var(--primary-color);
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s;
 }
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icon {
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.icon:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.login-btn {
+    padding: 8px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.login-btn:hover {
+    color: #ffffff;
+    background: linear-gradient(45deg, #c061cd, #f78196);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(192, 97, 205, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    nav ul {
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+    }
+    
+    nav {
+        order: 3;
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    nav ul {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .icons {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+    
+    nav a {
+        font-size: 0.9rem;
+    }
+    
+    .login-btn {
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .icon {
+        font-size: 1rem;
+    }
+}
+
 
 .search-bar {
     display: flex;
@@ -239,53 +343,7 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-.icons {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
 
-.icon {
-    font-size: 1.2rem;
-    transition: color 0.3s;
-    position: relative;
-}
-
-.icon span {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background: var(--primary-color);
-    color: white;
-    font-size: 0.7rem;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon:hover {
-    color: var(--primary-color);
-}
-
-.login-btn {
-    padding: 8px 16px;
-    background-color: transparent;
-    border: 1px solid #ffffff;
-    border-radius: 6px;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.login-btn:hover {
-    border-color: #999;
-    background: linear-gradient(to bottom right, #c061cd, #f78196);
-    transition: background 0.3s ease-in-out;
-}
 
 
 /* Breadcrumb */
@@ -1085,21 +1143,3 @@ footer {
     opacity: 0.8;
 }
 
-.login-btn {
-    padding: 8px 16px;
-    margin-right: 10px;
-    background-color: transparent;
-    border: 1px solid #ffffff;
-    border-radius: 6px;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.login-btn:hover {
-    border-color: #999;
-    background: linear-gradient(to bottom right, #c061cd, #f78196);
-    transition: background 0.3s ease-in-out;
-    color: #ffffff;
-}

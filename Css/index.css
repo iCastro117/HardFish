@@ -1,24 +1,29 @@
 /* Estilos generales */
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Arial", sans-serif;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --primary-color: #e83e8c;
+    --secondary-color: #6f42c1;
+    --text-color: #ffffff;
+    --background: #121212;
 }
 
 body {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: var(--background);
+    color: var(--text-color);
     overflow-x: hidden;
     position: relative;
-    min-height: 100vh;
 }
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
@@ -122,8 +127,9 @@ a {
 }
 
 
-/* Estilos del header */
 
+
+/* Estilos del header */
 header {
     padding: 20px 0;
     position: fixed;
@@ -139,12 +145,18 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.03);
 }
 
 .logo-circle {
@@ -152,26 +164,47 @@ header .container {
     height: 30px;
     background-color: #ffffff;
     border-radius: 50%;
+    flex-shrink: 0;
 }
 
 .logo h1 {
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--primary-color);
+    font-weight: 700;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 2rem;
 }
 
-nav ul li a {
-    font-size: 1rem;
-    transition: opacity 0.3s;
+nav a {
+    color: var(--text-color);
+    font-weight: 500;
+    transition: all 0.3s;
+    position: relative;
+    padding: 5px 0;
 }
 
-nav ul li a:hover {
-    opacity: 0.8;
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 .icons {
@@ -182,13 +215,77 @@ nav ul li a:hover {
 
 .icon {
     font-size: 1.2rem;
-    transition: opacity 0.3s;
+    transition: all 0.3s;
+    position: relative;
 }
 
 .icon:hover {
-    opacity: 0.8;
+    color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
+.login-btn {
+    padding: 8px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    color: #ffffff;
+    background: linear-gradient(45deg, #c061cd, #f78196);
+    box-shadow: 0 5px 15px rgba(192, 97, 205, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    nav ul {
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+    }
+    
+    nav {
+        order: 3;
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    nav ul {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .icons {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+    
+    nav a {
+        font-size: 0.9rem;
+    }
+    
+    .login-btn {
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .icon {
+        font-size: 1rem;
+    }
+}
 
 /* Estilos del hero */
 
@@ -683,23 +780,7 @@ footer {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.login-btn {
-    padding: 8px 16px;
-    margin-right: 10px;
-    background-color: transparent;
-    border: 1px solid #ffffff;
-    border-radius: 6px;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
 
-.login-btn:hover {
-    border-color: #999;
-    background: linear-gradient(to bottom right, #c061cd, #f78196);
-    transition: background 0.3s ease-in-out;
-}
 
 
 /* Responsive */

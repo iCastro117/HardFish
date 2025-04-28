@@ -122,7 +122,6 @@ body {
 
 
 /* Header */
-
 header {
     display: flex;
     justify-content: space-between;
@@ -163,14 +162,75 @@ nav ul {
 
 nav a {
     color: var(--text-color);
-    text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: all 0.3s;
+    position: relative;
+    padding: 5px 0;
+    text-decoration: none; /* Elimina el subrayado por defecto */
 }
 
-nav a:hover {
-    color: var(--primary-color);
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s;
 }
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    nav ul {
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .icons {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    .login-btn {
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
+
+    .icon {
+        font-size: 1rem;
+    }
+}
+
 
 
 /* Main content */
@@ -284,6 +344,7 @@ main {
 
 .login-btn:hover {
     border-color: #999;
+    color: #ffffff;
     background: linear-gradient(to bottom right, #c061cd, #f78196);
     transition: background 0.3s ease-in-out;
 }
