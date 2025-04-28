@@ -409,7 +409,7 @@ nav a:hover::after {
 .category-card:nth-child(5),
 .category-card:nth-child(6) {
     grid-column: span 2; /* Ocupar dos columnas para centrar */
-    width: 45%; /* Ajustar el ancho manualmente */
+    width: 55%; /* Ajustar el ancho manualmente */
     margin: 0 auto; /* Centrar la tarjeta dentro de su columna */
 }
 
