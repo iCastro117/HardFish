@@ -344,7 +344,10 @@ nav a:hover::after {
 .buttons {
     display: flex;
     gap: 20px;
+    align-items: center; /* Asegura que los elementos estén alineados verticalmente */
 }
+
+
 
 .btn {
     padding: 15px 60px;
@@ -353,18 +356,25 @@ nav a:hover::after {
     font-weight: 500;
     text-transform: uppercase;
     transition: all 0.3s;
+    display: inline-flex; /* Cambiado a inline-flex */
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+    height: 52px; /* Altura fija para ambos botones */
+    line-height: 1; /* Asegura que la línea de texto esté centrada */
 }
 
 .btn-primary {
     background: linear-gradient(to right, #c061cd, #f78196);
     color: #ffffff;
+    border: none; /* Asegura que no haya borde */
 }
 
 .btn-outline {
     border: 1px solid #ffffff;
     background-color: transparent;
+    color: #ffffff;
+    box-sizing: border-box; /* Asegura que el borde se incluya en el tamaño total */
 }
-
 .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -379,6 +389,14 @@ nav a:hover::after {
     margin-bottom: 220px;
 }
 
+/* Asegura que el botón superior también tenga el mismo estilo */
+.top-button .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px; /* Altura más pequeña para el botón superior */
+    line-height: 1;
+}
 .btn-outline {
     padding: 8px 30px;
     border: 1px solid #ffffff;
@@ -529,7 +547,8 @@ nav a:hover::after {
     background-color: rgba(18, 18, 18, 0.7);
     backdrop-filter: blur(5px);
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible; /* Cambiado de hidden a visible */
+    position: relative; /* Añade posición relativa */
 }
 
 .table-header {
@@ -539,17 +558,19 @@ nav a:hover::after {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
 }
-
 .table-row {
     display: flex;
     padding: 20px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
+    transform-origin: center left; /* Cambia el origen de la transformación */
+    overflow: visible; /* Permite que el contenido sea visible fuera de los límites */
 }
 
 .table-row:hover {
     background-color: rgba(255, 255, 255, 0.05);
     transform: scale(1.02);
+    z-index: 10; /* Asegura que la fila esté por encima de otras al hacer hover */
 }
 
 .tag:hover {
@@ -560,6 +581,8 @@ nav a:hover::after {
 .column {
     display: flex;
     align-items: center;
+    overflow: visible; /* Permite que el contenido sea visible fuera de los límites */
+    white-space: nowrap; /* Evita que el texto se rompa en múltiples líneas */
 }
 
 .column.name {
@@ -629,8 +652,9 @@ nav a:hover::after {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     flex-shrink: 0;
+    position: relative; /* Añade posición relativa */
+    z-index: 11; /* Asegura que esté por encima de otros elementos */
 }
-
 
 /* Efecto al pasar el mouse */
 
