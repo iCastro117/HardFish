@@ -293,7 +293,7 @@ nav a:hover::after {
     height: calc(100vh - 80px);
     display: flex;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 60px;
     position: relative;
     z-index: 2;
 }
@@ -398,7 +398,7 @@ nav a:hover::after {
 /* Sección de destacados */
 
 .featured-section {
-    margin-top: 120px;
+    margin-top: -100px;
     position: relative;
     z-index: 2;
 }
