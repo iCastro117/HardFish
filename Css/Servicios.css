@@ -35,6 +35,7 @@ a {
 }
 
 /* Fondo animado con burbujas */
+
 .background {
     position: fixed;
     top: 0;
@@ -58,7 +59,7 @@ a {
     background: linear-gradient(to right, #e83e8c, #3b10d3);
     top: 10%;
     left: 10%;
-    animation: float 15s ease-in-out infinite;
+    animation: float 8s ease-in-out infinite;
 }
 
 .bubble-2 {
@@ -67,7 +68,7 @@ a {
     background: linear-gradient(to right, #6f42c1, #e83e8c);
     top: 60%;
     left: 20%;
-    animation: float 18s ease-in-out infinite 2s;
+    animation: float 10s ease-in-out infinite 1s;
 }
 
 .bubble-3 {
@@ -76,7 +77,7 @@ a {
     background: linear-gradient(to right, #991ee0, #ff0543);
     top: 30%;
     right: 15%;
-    animation: float 20s ease-in-out infinite 1s;
+    animation: float 12s ease-in-out infinite 2s;
 }
 
 .bubble-4 {
@@ -85,7 +86,7 @@ a {
     background: linear-gradient(to right, #6f42c1, #007bff);
     bottom: 20%;
     right: 25%;
-    animation: float 12s ease-in-out infinite 3s;
+    animation: float 9s ease-in-out infinite 3s;
 }
 
 .bubble-5 {
@@ -94,7 +95,7 @@ a {
     background: linear-gradient(to right, #c061cd, #f78196);
     bottom: 10%;
     left: 5%;
-    animation: float 25s ease-in-out infinite;
+    animation: float 11s ease-in-out infinite;
 }
 
 .bubble-6 {
@@ -103,7 +104,43 @@ a {
     background: linear-gradient(to right, #e923f0, #e83e8c);
     top: 5%;
     right: 10%;
-    animation: float 22s ease-in-out infinite 4s;
+    animation: float 13s ease-in-out infinite 4s;
+}
+
+.bubble-7 {
+    width: 220px;
+    height: 220px;
+    background: linear-gradient(to right, #ff0543, #6f42c1);
+    top: 40%;
+    left: 30%;
+    animation: float 14s ease-in-out infinite 5s;
+}
+
+.bubble-8 {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(to right, #3b10d3, #e83e8c);
+    bottom: 30%;
+    right: 35%;
+    animation: float 15s ease-in-out infinite 6s;
+}
+
+.bubble-9 {
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(to right, #007bff, #c061cd);
+    top: 20%;
+    left: 40%;
+    animation: float 16s ease-in-out infinite 7s;
+}
+
+.bubble-10 {
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(to right, #e83e8c, #991ee0);
+    bottom: 5%;
+    right: 5%;
+    animation: float 17s ease-in-out infinite 8s;
 }
 
 @keyframes float {
@@ -111,18 +148,19 @@ a {
         transform: translate(0, 0) rotate(0deg);
     }
     25% {
-        transform: translate(5%, 5%) rotate(5deg);
+        transform: translate(20vw, 20vh) rotate(5deg);
     }
     50% {
-        transform: translate(0, 10%) rotate(0deg);
+        transform: translate(40vw, 40vh) rotate(0deg);
     }
     75% {
-        transform: translate(-5%, 5%) rotate(-5deg);
+        transform: translate(20vw, 60vh) rotate(-5deg);
     }
     100% {
         transform: translate(0, 0) rotate(0deg);
     }
 }
+
 
 /* Estilos del header */
 header {
