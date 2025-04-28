@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechHardware - Iniciar Sesión</title>
+    <title>HardFish - Iniciar Sesión</title>
     <link rel="stylesheet" href="../Css/InicioSesion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -38,27 +38,17 @@
     <main>
         <div class="login-container">
             <div class="glass-panel">
-                <h2>Login</h2>
+                <h2>Iniciar Sesión</h2>
 
-                <form action="#" method="post">
+                <form id="loginForm">
                     <div class="form-group">
-                        <label for="name" class="form-label">Nombre</label>
-                        <input type="text" id="name" name="name" placeholder="Ej: Isabella" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name" class="form-label">Correo Electrónico</label>
+                        <label for="email" class="form-label">Correo Electrónico</label>
                         <input type="email" id="email" name="email" placeholder="Ej: info@hardfish.com" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="name" class="form-label">Contraseña</label>
+                        <label for="password" class="form-label">Contraseña</label>
                         <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name" class="form-label">Confirmar Contraseña</label>
-                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar Contraseña" required>
                     </div>
 
                     <div class="forgot-password">
@@ -66,6 +56,7 @@
                     </div>
 
                     <button type="submit" class="login-btn">Iniciar Sesión</button>
+                    <div id="loginMessage" class="message-container"></div>
                 </form>
 
                 <div class="register-link">
@@ -112,9 +103,12 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 HardwFish. Todos los derechos reservados.</p>
+            <p>&copy; 2025 HardFish. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="../Js/auth.js"></script>
+    <script src="../Js/index.js"></script>
 </body>
 
 </html>

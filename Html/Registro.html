@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechHardware - Registro</title>
+    <title>HardFish - Registro</title>
     <link rel="stylesheet" href="../Css/Registro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -41,15 +41,33 @@
                 <h2>Registro</h2>
                 <p class="subtitle">Crea una cuenta para acceder a ofertas exclusivas</p>
 
-                <form action="#" method="post">
+                <form id="registerForm">
                     <div class="form-group">
-                        <label for="name" class="form-label">Correo Electrónico</label>
+                        <label for="name" class="form-label">Nombre completo</label>
+                        <input type="text" id="name" name="name" placeholder="Ej: Juan Pérez" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name" class="form-label">Dirección</label>
+                        <input type="text" id="name" name="name" placeholder="Ej: Cra 9 #10-23" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="form-label">Telefono</label>
+                        <input type="text" id="name" name="name" placeholder="Ej: 312882531 o (601)3929906" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Correo Electrónico</label>
                         <input type="email" id="email" name="email" placeholder="Ej: info@hardfish.com" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="name" class="form-label">Contraseña</label>
+                        <label for="password" class="form-label">Contraseña</label>
                         <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmar Contraseña" required>
                     </div>
 
                     <div class="terms">
@@ -58,6 +76,7 @@
                     </div>
 
                     <button type="submit" class="register-btn">Crear Cuenta</button>
+                    <div id="registerMessage" class="message-container"></div>
                 </form>
 
                 <div class="social-register">
@@ -118,6 +137,10 @@
             <p>&copy; 2025 HardFish. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="../Js/auth.js"></script>
+    <script src="../Js/auth.js"></script>
+    <script src="../Js/index.js"></script>
 </body>
 
 </html>
