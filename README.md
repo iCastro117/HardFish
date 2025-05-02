@@ -40,6 +40,8 @@ npx tsc --init
 
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss-cli@latest init -p
+npm install -D @tailwindcss/postcss
+
 Y
 
 Luego configura tailwind.config.js y globals.css como ya tienes en tu estructura.
@@ -96,7 +98,6 @@ npm install
 npx next dev
 
 
-node backend/server.js
 
 
 
@@ -133,6 +134,25 @@ npm list react-day-picker
 npm i react-day-picker
 
 npm install react-day-picker@latest
+
+npm install -D tailwindcss postcss autoprefixer
+
+npm install tailwindcss@compat @tailwindcss/postcss7-compat
+
+npm uninstall tailwindcss @tailwindcss/postcss7-compat
+
+npm install tailwindcss autoprefixer
+
+npm install next@latest
+
+npm uninstall tailwindcss autoprefixer postcss
+
+
+
+
+npm install @tailwindcss/postcss --save-dev
+npm install postcss-load-config --save-dev
+
 
 
 🎨 9. Para proyectos de JavaScript/TypeScript:
