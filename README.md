@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # HardFish
 =======
 🔁 0. REQUISITOS PREVIOS (fuera del proyecto)
