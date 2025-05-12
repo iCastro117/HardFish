@@ -55,7 +55,7 @@
         "jose": "^6.0.10",
         "jsonwebtoken": "^9.0.2",
         "lucide-react": "^0.503.0",
-        "mongoose": "^8.14.1",
+        "mongoose": "^8.14.2",
         "next": "^15.3.1",
         "next-themes": "^0.4.6",
         "postcss": "^8.5.3",
@@ -80,6 +80,7 @@
         "@typescript-eslint/parser": "^8.31.1",
         "concurrently": "^9.1.2",
         "eslint": "^9.25.1",
+        "nodemon": "^3.1.10",
         "postcss-load-config": "^6.0.1",
         "typescript": "^5.8.3"
     }
